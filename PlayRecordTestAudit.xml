@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_40" class="java.beans.XMLDecoder">
+ <object class="com.dialogic.xms.smoke.test.Audit">
+  <void property="auditTestName">
+   <string>PlayRecordTest</string>
+  </void>
+  <void property="checkpointCount">
+   <int>4</int>
+  </void>
+  <void property="configContents">
+   <object class="com.dialogic.xms.smoke.test.Config">
+    <void property="appID">
+     <string>msml</string>
+    </void>
+    <void property="channels">
+     <int>1</int>
+    </void>
+    <void property="count">
+     <int>1</int>
+    </void>
+    <void property="ipAddress">
+     <string>146.152.64.141</string>
+    </void>
+    <void property="maxTime">
+     <int>10</int>
+    </void>
+    <void property="recordFileName">
+     <string>Test</string>
+    </void>
+    <void property="stim">
+     <string>Manual</string>
+    </void>
+    <void property="type">
+     <string>MSML</string>
+    </void>
+   </object>
+  </void>
+  <void property="configFileName">
+   <string>PlayRecordConfig.xml</string>
+  </void>
+  <void property="numPass">
+   <int>3</int>
+  </void>
+  <void property="startTime">
+   <string>[12:21:55.505] </string>
+  </void>
+  <void property="testCheckpoints">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>WaitCall</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:21:56.051] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>ACK sip:Test@10.20.120.13:5070 SIP/2.0&#13;
+Via: SIP/2.0/UDP 10.20.120.13:5060;rport=5060;received=10.20.120.13;branch=z9hG4bK3866&#13;
+From: &quot;&quot; &lt;sip:toto@10.20.120.13&gt;;tag=1887&#13;
+To: &lt;sip:Test@10.20.120.13:5070&gt;;tag=11d9c0f&#13;
+Call-ID: 5890&#13;
+CSeq: 20 ACK&#13;
+Contact: &quot;&quot; &lt;sip:toto@10.20.120.13&gt;&#13;
+Max-Forwards: 70&#13;
+User-Agent: Linphone/3.5.2.032013 (eXosip2 /3.6.0)&#13;
+Content-Length: 0&#13;
+&#13;
+</string>
+      </void>
+      <void property="shortDesc">
+       <string>Adding to waitCall list</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>Record</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:21:58.058] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;msml version=&quot;1.1&quot;&gt;&#13;
+	&lt;event name=&quot;moml.exit&quot;&#13;
+		id=&quot;conn:ee0bfef8-8d409892-13c4-50022-cc-3682b456-cc/dialog:Record&quot;&gt;&#13;
+		&lt;name&gt;record.end&lt;/name&gt;&lt;value&gt;record.complete.maxlength&lt;/value&gt;&#13;
+		&lt;name&gt;record.len&lt;/name&gt;&lt;value&gt;10020&lt;/value&gt;&#13;
+&lt;/event&gt;&#13;
+&lt;/msml&gt;</string>
+      </void>
+      <void property="shortDesc">
+       <string>Starting record</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>Play</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:22:09.219] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;msml version=&quot;1.1&quot;&gt;&#13;
+	&lt;event name=&quot;moml.exit&quot;&#13;
+		id=&quot;conn:ee0bfef8-8d409892-13c4-50022-cc-3682b456-cc/dialog:Play&quot;&gt;&#13;
+		&lt;name&gt;play.amt&lt;/name&gt;&lt;value&gt;9930&lt;/value&gt;&#13;
+		&lt;name&gt;play.end&lt;/name&gt;&lt;value&gt;play.complete&lt;/value&gt;&#13;
+&lt;/event&gt;&#13;
+&lt;/msml&gt;</string>
+      </void>
+      <void property="shortDesc">
+       <string>Starting Play</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>FinalDropCall</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:22:19.764] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>SIP/2.0 200 OK&#13;
+From: &lt;sip:Test@10.20.120.13&gt;;tag=163d7e4&#13;
+To: &lt;sip:msml@146.152.64.141&gt;;tag=ee0bfef8-8d409892-13c4-50022-cc-3682b456-cc&#13;
+Call-ID: e577a9f645f4ed0e128140922540d87c@10.20.120.13&#13;
+CSeq: 4 BYE&#13;
+Via: SIP/2.0/UDP 10.20.120.13:5070;branch=z9hG4bKa4f57e6a48635637615264efddf61410&#13;
+Allow: INVITE,CANCEL,ACK,BYE,OPTIONS,INFO,REFER,NOTIFY,UPDATE&#13;
+Content-Length: 0&#13;
+&#13;
+</string>
+      </void>
+      <void property="shortDesc">
+       <string>Dropping call</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void property="testStatus">
+   <string>SUCCESS</string>
+  </void>
+ </object>
+</java>

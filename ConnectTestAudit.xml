@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_40" class="java.beans.XMLDecoder">
+ <object class="com.dialogic.xms.smoke.test.Audit">
+  <void property="auditTestName">
+   <string>OutboundPlayTest</string>
+  </void>
+  <void property="checkpointCount">
+   <int>3</int>
+  </void>
+  <void property="configContents">
+   <object class="com.dialogic.xms.smoke.test.Config">
+    <void property="appID">
+     <string>msml</string>
+    </void>
+    <void property="callType">
+     <string>Outbound</string>
+    </void>
+    <void property="channels">
+     <int>1</int>
+    </void>
+    <void property="count">
+     <int>1</int>
+    </void>
+    <void property="ipAddress">
+     <string>146.152.64.141</string>
+    </void>
+    <void property="outboundAddress">
+     <string>toto@10.20.120.13:5060</string>
+    </void>
+    <void property="playFileName">
+     <string>smoketest/success</string>
+    </void>
+    <void property="stim">
+     <string>Manual</string>
+    </void>
+    <void property="type">
+     <string>MSML</string>
+    </void>
+   </object>
+  </void>
+  <void property="configFileName">
+   <string>ConnectTestConfig.xml</string>
+  </void>
+  <void property="numPass">
+   <int>5</int>
+  </void>
+  <void property="startTime">
+   <string>[12:50:39.060] </string>
+  </void>
+  <void property="testCheckpoints">
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>MakeCall</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:50:39.090] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>SIP/2.0 200 OK&#13;
+Via: SIP/2.0/UDP 10.20.120.13:5070;branch=z9hG4bK42da42261cb687408470cf34a449d71e&#13;
+From: &lt;sip:Test@10.20.120.13&gt;;tag=15e9f99&#13;
+To: &lt;sip:toto@10.20.120.13:5060&gt;;tag=18467&#13;
+Call-ID: 2549ec02a399ab64923f5091c1ceb19e@10.20.120.13&#13;
+CSeq: 1 INVITE&#13;
+Contact: &lt;sip:toto@10.20.120.13&gt;&#13;
+Content-Type: application/sdp&#13;
+User-Agent: Linphone/3.5.2.032013 (eXosip2 /3.6.0)&#13;
+Content-Length: 232&#13;
+&#13;
+v=0&#13;
+o=toto 2170 389 IN IP4 10.20.120.13&#13;
+s=Talk&#13;
+c=IN IP4 10.20.120.13&#13;
+t=0 0&#13;
+m=audio 7078 RTP/AVP 0 101&#13;
+a=rtpmap:0 PCMU/8000&#13;
+a=rtpmap:101 telephone-event/8000&#13;
+a=fmtp:101 0-11&#13;
+m=video 9078 RTP/AVP 103&#13;
+a=rtpmap:103 VP8/90000&#13;
+</string>
+      </void>
+      <void property="shortDesc">
+       <string>Making a outbound call</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>Play</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:50:40.756] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;
+&lt;msml version=&quot;1.1&quot;&gt;&#13;
+	&lt;event name=&quot;moml.exit&quot;&#13;
+		id=&quot;conn:edec6aa0-8d409892-13c4-50022-7d01f-7284a981-7d01f/dialog:Play&quot;&gt;&#13;
+		&lt;name&gt;play.amt&lt;/name&gt;&lt;value&gt;4440&lt;/value&gt;&#13;
+		&lt;name&gt;play.end&lt;/name&gt;&lt;value&gt;play.complete&lt;/value&gt;&#13;
+&lt;/event&gt;&#13;
+&lt;/msml&gt;</string>
+      </void>
+      <void property="shortDesc">
+       <string>Starting Play</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.dialogic.xms.smoke.test.Checkpoint">
+      <void property="checkpointName">
+       <string>DropCall</string>
+      </void>
+      <void property="checkpointStartTime">
+       <string>[12:50:50.778] </string>
+      </void>
+      <void property="checkpointStatus">
+       <string>SUCCESS</string>
+      </void>
+      <void property="longDesc">
+       <string>SIP/2.0 200 OK&#13;
+From: &lt;sip:Test@10.20.120.13&gt;;tag=15e9f99&#13;
+To: &lt;sip:msml@146.152.64.141&gt;;tag=edec6aa0-8d409892-13c4-50022-7d01f-7284a981-7d01f&#13;
+Call-ID: 7e1f7ec683b5c1784c494eefe88c4e62@10.20.120.13&#13;
+CSeq: 3 BYE&#13;
+Via: SIP/2.0/UDP 10.20.120.13:5070;branch=z9hG4bK992a125f7fde07c5c33aa2a5417ccc6e&#13;
+Allow: INVITE,CANCEL,ACK,BYE,OPTIONS,INFO,REFER,NOTIFY,UPDATE&#13;
+Content-Length: 0&#13;
+&#13;
+</string>
+      </void>
+      <void property="shortDesc">
+       <string>Dropping call</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void property="testStatus">
+   <string>SUCCESS</string>
+  </void>
+ </object>
+</java>
